@@ -2,3 +2,6 @@ external_maf/datasets/
 .DS_Store
 .env/
 __pycache__/
+*/.DS_Store
+*/*/.DS_Store
+models/
