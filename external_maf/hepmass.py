@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from collections import Counter
 from os.path import join
 
-import datasets
-import util
+import external_maf.datasets as datasets
+import external_maf.util as util
 
 
 class HEPMASS:

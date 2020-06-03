@@ -2,8 +2,8 @@ import numpy as np
 import h5py
 import matplotlib.pyplot as plt
 
-import datasets
-import util
+import external_maf.datasets as datasets
+import external_maf.util as util
 
 
 class BSDS300:
