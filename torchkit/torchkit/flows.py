@@ -334,7 +334,7 @@ class IAF_DDSF(BaseFlow):
         if type(dim) is int:
             self.mdl = iaf_modules.cMADE(
                     dim, hid_dim, context_dim, num_layers,
-                    num_ds_multiplier*(hid_dim/dim)*num_ds_layers,
+                    num_ds_multiplier * (hid_dim // dim) * num_ds_layers,
                     activation, fixed_order)
 
         num_dsparams = 0

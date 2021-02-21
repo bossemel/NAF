@@ -22,15 +22,15 @@ import os
 
 class MAF(object):
 
-    def __init__(self, args, p):
+    def __init__(self, args, dim):
 
         self.args = args
         self.__dict__.update(args.__dict__)
-        self.p = p
+        self.p = dim
 
-        dim = p
         dimc = 1
         dimh = args.dimh
+
         flowtype = args.flowtype
         num_flow_layers = args.num_flow_layers
         num_ds_dim = args.num_ds_dim
@@ -128,8 +128,8 @@ class model(object):
         self.test_loader = data.DataLoader(te,
                                            batch_size=args.batch_size,
                                            shuffle=False)
-
-        self.maf = MAF(args, p)
+        dim = tr.shape[1]
+        self.maf = MAF(args, dim)
 
         # optim
         amsgrad = bool(args.amsgrad)
